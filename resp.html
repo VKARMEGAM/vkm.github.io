@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Karmegam Responsive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/83f106e8a0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+document.onreadystatechange = function(e)
+{
+  if(document.readyState=="interactive")
+  {
+    var all = document.getElementsByTagName("*");
+    for (var i=0, max=all.length; i < max; i++) 
+    {
+      set_ele(all[i]);
+    }
+  }
+}
+
+function check_element(ele)
+{
+  var all = document.getElementsByTagName("*");
+  var totalele=all.length;
+  var per_inc=100/all.length;
+  if($(ele).on())
+  {
+    var prog_width=per_inc+Number(document.getElementById("progress_width").value);
+    document.getElementById("progress_width").value=prog_width;
+    $("#bar1").animate({width:prog_width+"%"},10,function(){
+      if(document.getElementById("bar1").style.width=="100%")
+      {
+        $(".progress").fadeOut("fast");
+      }			
+    });
+  }
+  else	
+  {
+    set_ele(ele);
+  }
+}
+
+function set_ele(set_element)
+{
+  check_element(set_element);
+}
+
+$(document).ready(function(){
+ $(window).scroll(function(){
+ if ($(window).scrollTop() > 100) {
+  $('#scrollToTop').fadeIn();
+ } else {
+  $('#scrollToTop').fadeOut();
+ }
+ });
+});
+
+function scrolltop()
+{
+ $('html, body').animate({scrollTop : 0},500);
+}
+
+
+</script>
+</head>
+<body>
+
+<div class='progress' id="progress_div">
+    <div class='bar' id='bar1'></div>
+    <div class='percent' id='percent1'></div>
+</div>
+
+  <!--place this at last--><input type="hidden" id="progress_width" value="0">
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg ">
+  <a class="navbar-brand" href="#">Karmegam</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+ 
+  <div class="collapse navbar-collapse" id="navbarNav">
+     <div class="mr-auto"></div>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Profile</a>
+      </li>
+    <li class="nav-item dropdown">
+      <div class="dropdown">
+        <a href="#" class="nav-link">Pages</a>
+        <div class="dropdown-content">
+          <a href="#">Generic page</a>
+          <a href="#">Page 2</a>
+        </div>
+      </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Me</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    </div>
+
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-7 col-sm-12">
+          <h6>Welcome to my website</h6> 
+         <!-- <p>Here, Bootstrap is included</p>-->
+          <h1>Click Here</h1>
+          <button class="btn btn-light px-5 py-2 ">To View My Resume</button>
+        </div>
+        <div class="col-md-5 col-sm-12 h-25">
+          <img src="imgs/rimage.png" alt="Karmegam">
+        </div> 
+      </div>      
+    </div>
+
+  </header>
+  <main>
+  	<section class="section-1">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="imgs/ml.jpg" alt="Machine Learning with Python" class="" /> 
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1> My Passion</h1>
+              <p class="pt-4">
+              	"Machine Learning with Python"</p>
+              <p> I am interested in Data Science and i am enthusiastic about learning new technologies. Good understanding over the Machine Learning, Python, algorithma and Java.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-2 container-fluid p-0">
+      <div class="cover">
+        <div class="overlay"></div>
+        <div class="content text-center">
+         <h1>Some Specials </h1> 
+         <p>Are mentioned here</p>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+        <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+          <div class="rect">
+            <p>View Count</p>
+               <h1>
+<a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=7659068&style=0001&nbdigits=5&type=page&initCount=0" title="Total Website Hits" Alt="Web Hits"   border="0" /></a>      </h1>
+          </div>
+          <div class="rect">
+             <p>Age</p>
+              <h1>25</h1>
+          </div>
+          <div class="rect">
+          	<p>OS</p>
+            <h1>
+            <p id="GFG_UP"> </p> 
+              <p id="GFG_DOWN"></p> 
+              <script> 
+        HTMLDocument.prototype.e = document.getElementById; 
+        var el_up = document.e("GFG_UP"); 
+        var el_down = document.e("GFG_DOWN"); 
+        el_up.innerHTML = ""; 
+        var Name = "Not known"; 
+        if (navigator.appVersion.indexOf("Win") != -1) Name =  
+          "Win"; 
+        if (navigator.appVersion.indexOf("Mac") != -1) Name =  
+          "Mac"; 
+        if (navigator.appVersion.indexOf("X11") != -1) Name =  
+          "UNIX"; 
+        if (navigator.appVersion.indexOf("Linux") != -1) Name =  
+          "Linux"; 
+        
+            el_down.innerHTML = Name; 
+      
+                </script></h1>
+             </div>
+
+     
+        </div>
+      </div>
+  </section>
+    
+          <div class="purchase text-center">
+            <h1>Projects</h1>
+            <p>Machine Learning Algorithms</p>
+            <div class="cards">
+              <div class="d-flex flex-row justify-content-center flex-wrap">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="title">
+                      <h5 class="card-title">Supervised Algorithms</h5>
+                    </div>
+                    <p class="card-text">To enable machines to classify objects, problems/situations based on labelled data to fed to the machine"</p>
+                    <div class="pricing">
+                      <a href="#">Drive Link</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <div class="title">
+                      <h5 class="card-title">UNSupervised Algorithms</h5>
+                    </div>
+                    <p class="card-text">To classify objects, problems/situations without any labelled data"</p>
+                    <div class="pricing">
+                      <a href="#">Drive Link</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+        </section>
+        <section class="section-3 container-fluid p-0 text-center">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">
+              <h1>My Interests</h1>
+              <p> some few areas</p>
+            </div>
+            </div>
+            <div class="platfeom row">
+            	<div class="col-md-4 col-sm-12 text-right">
+            		<div class="desktop shadow-lg">
+            		<div class="d-flex flex-row justify-content-center">
+            			<i class="fab fa-python fa-3x py-2 pr-3"></i>
+            			<div class="text text-left">
+            				<h3 class="pt-1 m-0">Python</h3>
+            				<p class="p-0 m-0">Programming</p>
+            			</div>
+            		</div>
+            	</div>
+            	</div>
+            	<div class="col-md-4 col-sm-12 text-center">
+            		<div class="desktop shadow-lg">
+            		<div class="d-flex flex-row justify-content-center">
+            			<i class="fas fa-brain fa-3x py-2 pr-3"></i>
+            			<div class="text text-left">
+            				<h3 class="pt-1 m-0">Machine Learning</h3>
+            				<p class="p-0 m-0">Algorithms</p>
+            			</div>
+            		</div>
+            	</div>
+            	</div>
+            	<div class="col-md-4 col-sm-12 text-left">
+            		<div class="desktop shadow-lg">
+            		<div class="d-flex flex-row justify-content-center">
+            			<i class="fas fa-database fa-3x py-2 pr-3"></i>
+            			<div class="text text-left">
+            				<h3 class="pt-1 m-0">My SQL</h3>
+            				<p class="p-0 m-0">Query</p>
+            			</div>
+            		</div>
+            	</div>
+            	</div>
+            </div>
+        </section>
+ <!-- Section 4 -->
+    <section class="section-4">
+      <div class="container text-center">
+ 		   <h1>where i am interesting</h1>
+        		<p>  Online platforms</p>
+      </div>
+      <div class="team row ">
+        <div class="col-md-4 col-12 text-center">
+            <div class="card mr-2 d-inline-block shadow-lg">
+                <div class="card-img-top">
+                  <img src="imgs/git.png" class="img-fluid border-radius p-4" alt="">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Github</h3>
+                  <p class="card-text">Profile  </p>
+                  <a href="#" class="text-secondary text-decoration-none">VKARMEGAM</a>
+                  
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 col-12">
+            <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+                <div class="carousel-inner text-center">
+                  <div class="carousel-item active">
+                    <div class="card mr-2 d-inline-block shadow">
+                      <div class="card-img-top">
+                        <img src="imgs/kaggle.png" class="img-fluid rounded-circle w-50 p-4" alt="">
+                      </div>
+                      <div class="card-body">
+                        <h3 class="card-title">Kaggle</h3>
+                       <p class="card-text">Profile  </p>
+                  <a href="#" class="text-secondary text-decoration-none">VKARMEGAM</a>                 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card  d-inline-block mr-2 shadow">
+                      <div class="card-img-top">
+                        <img src="imgs/kaggle.png" class="img-fluid rounded-circle w-50 p-4" alt="">
+                      </div>
+                      <div class="card-body">
+                       <h3 class="card-title">Kaggle</h3>
+                       <p class="card-text">Profile  </p>
+                  <a href="#" class="text-secondary text-decoration-none">VKARMEGAM</a> 
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+        </div>
+        <div class="col-md-4 col-12 text-center">
+            <div class="card mr-2 d-inline-block shadow-lg">
+                <div class="card-img-top">
+                  <img src="imgs/colab.png" class="img-fluid border-radius p-4" alt="">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Colab</h3>
+                  <p class="card-text">
+                    Profile  </p>
+                  <a href="#" class="text-secondary text-decoration-none">Karmegam</a>
+                  </div>
+              </div>
+        </div>
+      </div>
+    </section>
+       
+<input type="button" value="Scroll Top" id="scrollToTop" onclick="scrolltop();">
+  </main>
+  <footer>
+  	<div class="container-fluid p-0 ">
+  		<div class="row text-left">
+  			<div class="col-md-5 col-md-5">
+  				<h1 class="text-light">About Me</h1>
+  				<p class="text-muted">My name is Kamegam V</p>
+  				<p class="pt-4 text-muted"> Designed and Build with the <span> Bootstrap </span> </p>
+  			</div>
+  			<div class="col-md-5">
+  				<h4 class="text-light">Newsletter</h4>
+  				<p class="text-muted">Stay Updated</p>
+  				<form class="form-inline">
+  					<div class="col pl-">
+  						<div class="input-group pr-5">
+  							<input type="text" class="form-control by-dark text-white" placeholder="Email-ID"><div class="input-group-text">
+  								<i class="fas fa-arrow-right"></i>
+  							</div>
+  						</div>
+  					</div>
+  				</form>
+  			</div>
+  			<div class="col-md-2 col-sm-12">
+  				<h4 class="text-light">Follow Me</h4>
+  				<p class="text-muted">Let me be social</p>
+  				<div class="column">
+  					<a href="#"><i class="fab fa-facebook-f"></i></a>
+  					<a href="#"><i class="fab fa-instagram"></i></a>
+  					<a href="#"><i class="fab fa-twitter"></i></a>
+  					<a href="#"><i class="fab fa-youtube"></i></a>
+  			
+  				</div>
+  			</div>
+  			
+  		</div>
+  	</div>
+    
+
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
+<!--
